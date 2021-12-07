@@ -1,6 +1,4 @@
 # PLC COMMUNICATION
- 
- # Özet
 S7.NET Kütüphanesini kullanarak gerçekleştirdiğim ayarlanabilir PLC Haberleşme Programı.
 Ayarlar şifresi '1' dir.
 
