@@ -83,13 +83,16 @@ namespace PLC
             // cmbDil
             // 
             this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDil.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbDil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.cmbDil.FormattingEnabled = true;
+            this.cmbDil.ItemHeight = 45;
             this.cmbDil.Items.AddRange(new object[] {
             "Türkçe",
             "English"});
-            this.cmbDil.Location = new System.Drawing.Point(534, 517);
+            this.cmbDil.Location = new System.Drawing.Point(534, 549);
             this.cmbDil.Name = "cmbDil";
-            this.cmbDil.Size = new System.Drawing.Size(135, 28);
+            this.cmbDil.Size = new System.Drawing.Size(171, 53);
             this.cmbDil.TabIndex = 26;
             this.cmbDil.SelectedIndexChanged += new System.EventHandler(this.cmbDil_SelectedIndexChanged);
             // 
@@ -104,9 +107,9 @@ namespace PLC
             this.btnTumunuSıl.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnTumunuSıl.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTumunuSıl.IconSize = 1;
-            this.btnTumunuSıl.Location = new System.Drawing.Point(534, 554);
+            this.btnTumunuSıl.Location = new System.Drawing.Point(724, 550);
             this.btnTumunuSıl.Name = "btnTumunuSıl";
-            this.btnTumunuSıl.Size = new System.Drawing.Size(372, 48);
+            this.btnTumunuSıl.Size = new System.Drawing.Size(178, 53);
             this.btnTumunuSıl.TabIndex = 25;
             this.btnTumunuSıl.Text = "TÜMÜNÜ SİL";
             this.btnTumunuSıl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -123,7 +126,7 @@ namespace PLC
             this.grpSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.grpSifre.Location = new System.Drawing.Point(534, 296);
             this.grpSifre.Name = "grpSifre";
-            this.grpSifre.Size = new System.Drawing.Size(368, 215);
+            this.grpSifre.Size = new System.Drawing.Size(368, 247);
             this.grpSifre.TabIndex = 24;
             this.grpSifre.TabStop = false;
             this.grpSifre.Text = "ŞİFRE DEĞİŞTİR";
@@ -158,7 +161,7 @@ namespace PLC
             this.btnSifre.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnSifre.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSifre.IconSize = 1;
-            this.btnSifre.Location = new System.Drawing.Point(190, 161);
+            this.btnSifre.Location = new System.Drawing.Point(190, 181);
             this.btnSifre.Name = "btnSifre";
             this.btnSifre.Size = new System.Drawing.Size(161, 48);
             this.btnSifre.TabIndex = 18;

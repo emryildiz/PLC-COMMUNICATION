@@ -88,6 +88,12 @@ namespace PLC
         
         private void Ayarlar_Load(object sender, EventArgs e)
         {
+            int dil = db.DilAyar();
+            if (dil == 1)
+                cmbDil.SelectedIndex = 1;
+            else
+                cmbDil.SelectedIndex = 0;
+
             CmbDoldur();
             PLCAyarDoldur();
         }
