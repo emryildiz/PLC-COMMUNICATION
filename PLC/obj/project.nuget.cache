@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rweQ5otokNRlca+5inRw3nMIGfrkr+gbbAK4Ba1F5QQYxvyWqltzoZw10E6QQMnvCwbGAwGTxQLH2Z1E+xmAsQ==",
+  "dgSpecHash": "tHKrxOtKG5yl5kx1ab0FFKxaJ7c0S+mA3j6otvdCzhB92UP1kGJ474IjkW1LHtF6hzFytXF7XtfTieHRzQHbOw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emre Yıldız\\Desktop\\S7.NET PLC COMMUNICATION\\PLC\\PLC.csproj",
+  "projectFilePath": "D:\\S7.NET PLC COMMUNICATION\\PLC-COMMUNICATION\\PLC\\PLC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre Yıldız\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Emre Yıldız\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",

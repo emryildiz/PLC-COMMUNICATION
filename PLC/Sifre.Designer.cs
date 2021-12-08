@@ -51,9 +51,9 @@ namespace PLC
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(187, 16);
+            this.txtSifre.Location = new System.Drawing.Point(187, 12);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(125, 27);
+            this.txtSifre.Size = new System.Drawing.Size(170, 27);
             this.txtSifre.TabIndex = 27;
             this.txtSifre.UseSystemPasswordChar = true;
             this.txtSifre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSifre_KeyDown);
@@ -64,7 +64,7 @@ namespace PLC
             this.lblSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.lblSifre.Location = new System.Drawing.Point(12, 9);
             this.lblSifre.Name = "lblSifre";
-            this.lblSifre.Size = new System.Drawing.Size(131, 47);
+            this.lblSifre.Size = new System.Drawing.Size(169, 47);
             this.lblSifre.TabIndex = 26;
             this.lblSifre.Text = "ŞİFRE:";
             this.lblSifre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,7 +82,7 @@ namespace PLC
             this.btnSifre.IconSize = 1;
             this.btnSifre.Location = new System.Drawing.Point(187, 61);
             this.btnSifre.Name = "btnSifre";
-            this.btnSifre.Size = new System.Drawing.Size(125, 48);
+            this.btnSifre.Size = new System.Drawing.Size(170, 48);
             this.btnSifre.TabIndex = 28;
             this.btnSifre.Text = "GİRİŞ";
             this.btnSifre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

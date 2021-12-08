@@ -30,6 +30,7 @@ namespace PLC
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbDil = new System.Windows.Forms.ComboBox();
             this.btnTumunuSıl = new FontAwesome.Sharp.IconButton();
             this.grpSifre = new System.Windows.Forms.GroupBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
@@ -66,6 +67,7 @@ namespace PLC
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.panel1.Controls.Add(this.cmbDil);
             this.panel1.Controls.Add(this.btnTumunuSıl);
             this.panel1.Controls.Add(this.grpSifre);
             this.panel1.Controls.Add(this.grpIp);
@@ -78,20 +80,33 @@ namespace PLC
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // cmbDil
+            // 
+            this.cmbDil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDil.FormattingEnabled = true;
+            this.cmbDil.Items.AddRange(new object[] {
+            "Türkçe",
+            "English"});
+            this.cmbDil.Location = new System.Drawing.Point(534, 517);
+            this.cmbDil.Name = "cmbDil";
+            this.cmbDil.Size = new System.Drawing.Size(135, 28);
+            this.cmbDil.TabIndex = 26;
+            this.cmbDil.SelectedIndexChanged += new System.EventHandler(this.cmbDil_SelectedIndexChanged);
+            // 
             // btnTumunuSıl
             // 
             this.btnTumunuSıl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btnTumunuSıl.FlatAppearance.BorderSize = 2;
             this.btnTumunuSıl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTumunuSıl.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTumunuSıl.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTumunuSıl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnTumunuSıl.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btnTumunuSıl.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnTumunuSıl.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTumunuSıl.IconSize = 1;
-            this.btnTumunuSıl.Location = new System.Drawing.Point(534, 526);
+            this.btnTumunuSıl.Location = new System.Drawing.Point(534, 554);
             this.btnTumunuSıl.Name = "btnTumunuSıl";
-            this.btnTumunuSıl.Size = new System.Drawing.Size(372, 76);
+            this.btnTumunuSıl.Size = new System.Drawing.Size(372, 48);
             this.btnTumunuSıl.TabIndex = 25;
             this.btnTumunuSıl.Text = "TÜMÜNÜ SİL";
             this.btnTumunuSıl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -117,7 +132,7 @@ namespace PLC
             // 
             this.txtSifre.Location = new System.Drawing.Point(190, 38);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(133, 34);
+            this.txtSifre.Size = new System.Drawing.Size(161, 34);
             this.txtSifre.TabIndex = 1;
             this.txtSifre.UseSystemPasswordChar = true;
             // 
@@ -127,7 +142,7 @@ namespace PLC
             this.lblSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.lblSifre.Location = new System.Drawing.Point(15, 31);
             this.lblSifre.Name = "lblSifre";
-            this.lblSifre.Size = new System.Drawing.Size(131, 47);
+            this.lblSifre.Size = new System.Drawing.Size(169, 47);
             this.lblSifre.TabIndex = 0;
             this.lblSifre.Text = "ŞİFRE:";
             this.lblSifre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,7 +152,7 @@ namespace PLC
             this.btnSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btnSifre.FlatAppearance.BorderSize = 2;
             this.btnSifre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSifre.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSifre.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnSifre.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btnSifre.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
@@ -145,7 +160,7 @@ namespace PLC
             this.btnSifre.IconSize = 1;
             this.btnSifre.Location = new System.Drawing.Point(190, 161);
             this.btnSifre.Name = "btnSifre";
-            this.btnSifre.Size = new System.Drawing.Size(134, 48);
+            this.btnSifre.Size = new System.Drawing.Size(161, 48);
             this.btnSifre.TabIndex = 18;
             this.btnSifre.Text = "DEĞİŞTİR";
             this.btnSifre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -258,7 +273,7 @@ namespace PLC
             this.btnIp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btnIp.FlatAppearance.BorderSize = 2;
             this.btnIp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIp.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIp.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnIp.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btnIp.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
@@ -313,7 +328,7 @@ namespace PLC
             this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btnSil.FlatAppearance.BorderSize = 2;
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSil.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSil.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnSil.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btnSil.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
@@ -399,7 +414,7 @@ namespace PLC
             this.ekleBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ekleBtn.FlatAppearance.BorderSize = 2;
             this.ekleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ekleBtn.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ekleBtn.Font = new System.Drawing.Font("Bahnschrift SemiLight Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ekleBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.ekleBtn.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.ekleBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
@@ -465,5 +480,6 @@ namespace PLC
         private System.Windows.Forms.Label lblSlot;
         private System.Windows.Forms.TextBox txtRack;
         private System.Windows.Forms.Label lblRack;
+        private System.Windows.Forms.ComboBox cmbDil;
     }
 }

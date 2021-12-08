@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using S7.Net;
 using System.Data;
+using System.Globalization;
 
 namespace PLC
 {
@@ -28,6 +29,10 @@ namespace PLC
 
         public Form1()
         {
+            int dil = db.DilAyar();
+            if(dil == 1)
+                Resources.Localization.Culture = new CultureInfo("en-US");
+
 
             DataTable dt = db.PlcAyarOku();
             cputype = dt.Rows[0][2].ToString();
@@ -91,15 +96,23 @@ namespace PLC
         }
 
 
+        private void Localization()
+        {
+            btnAnasayfa.Text = Resources.Localization.Anasayfa;
+            ayarlarBtn.Text   = Resources.Localization.Ayarlar;
+            btnCikis.Text = Resources.Localization.Cikis;
+            btnYazma.Text = Resources.Localization.Yazma;
+        }
+
         //Eventler
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Localization();
             ana.form = this;
             this.Text = string.Empty;
             this.ControlBox = false;
             openChildForm(ana);
-            txtIP.Text = "Bağlanıyor...";
+            txtIP.Text = Resources.Localization.Baglaniyor+"...";
             txtIP.ForeColor = Color.FromArgb(234, 119, 4);
             this.Focus();
             loadBg.RunWorkerAsync();
@@ -221,12 +234,17 @@ namespace PLC
             }
             catch
             {
-                txtIP.Text = "Bağlantı Yok!";
+                txtIP.Text = Resources.Localization.BaglantiYok+"!";
                 txtIP.ForeColor = Color.FromArgb(146,43,33);
                 this.baglanti = false;
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Resources.Localization.Culture = new CultureInfo("en-US");
+            Localization();
+        }
     }
 
 }

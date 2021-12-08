@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
 using System.Windows.Forms;
 
@@ -15,7 +16,38 @@ namespace PLC
 
         public Ayarlar()
         {
+            int dil = db.DilAyar();
+            if (dil == 1)
+                Resources.Localization.Culture = new CultureInfo("en-US");
+          
             InitializeComponent();
+            Localization();
+        }
+        private void Localization()
+        {
+            this.Text = Resources.Localization.Ayarlar;
+
+            grpEkle.Text = Resources.Localization.Ekle;
+            grpSil.Text = Resources.Localization.Sil;
+            grpSifre.Text = Resources.Localization.Sifre;
+            grpIp.Text = Resources.Localization.PlcAyar;
+
+            lblİsim.Text = Resources.Localization.İsim+":";
+            lblAdres.Text = Resources.Localization.Adres+":";
+            chkWritable.Text = Resources.Localization.Yazilabilir+":";
+            ekleBtn.Text = Resources.Localization.Ekle;
+
+            lblSil.Text = Resources.Localization.İsim+":";
+            btnSil.Text = Resources.Localization.Sil;
+
+            lblIp.Text = Resources.Localization.IpAdresi+":";
+            btnIp.Text = Resources.Localization.Degistir;
+
+            lblSifre.Text = Resources.Localization.Sifre + ":";
+            btnSifre.Text = Resources.Localization.Degistir;
+
+            btnTumunuSıl.Text = Resources.Localization.TumunuSil;
+
         }
         private void CmbDoldur()
         {
@@ -155,6 +187,18 @@ namespace PLC
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cmbDil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbDil.SelectedIndex == 0)
+            {
+                db.DilDegistir(0);
+            }
+            else
+            {
+                db.DilDegistir(1);
+            }
         }
     }
 }

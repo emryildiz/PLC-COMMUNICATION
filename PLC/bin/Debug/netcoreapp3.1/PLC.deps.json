@@ -17,6 +17,11 @@
         },
         "runtime": {
           "PLC.dll": {}
+        },
+        "resources": {
+          "en-US/PLC.resources.dll": {
+            "locale": "en-US"
+          }
         }
       },
       "EntityFramework/6.4.4": {

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
 using System.Windows.Forms;
 using ZedGraph;
@@ -19,8 +20,13 @@ namespace PLC
         public Plc plc;
         Grafik g = new Grafik();
         RollingPointPairList listPointsOne = new RollingPointPairList(30);
+        Veritabani db = new Veritabani();
         public FormGrafik()
         {
+            int dil = db.DilAyar();
+            if (dil == 1)
+                Resources.Localization.Culture = new CultureInfo("en-US");
+            this.Text = Resources.Localization.Grafik;
             InitializeComponent();
         }
         Stopwatch watch = new Stopwatch();
@@ -31,7 +37,7 @@ namespace PLC
             //Baslik Ayarlama
             g.BaslikAyarla("", GrafikControl);
             //Eksen Baslik İsimleri Belirleme
-            g.EksenIsımleriBelirle("Zaman(MiliSaniye)", isim, GrafikControl);
+            g.EksenIsımleriBelirle(Resources.Localization.Zaman+"("+Resources.Localization.MiliSaniye+")", isim, GrafikControl);
 
 
 

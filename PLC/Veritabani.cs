@@ -137,8 +137,30 @@ namespace PLC
             return dt;
         }
 
+        public int  DilAyar()
+        {
+            int dil=0;
+            string komut = "Select Dil from Dil";
+            SQLiteCommand cmd = new SQLiteCommand(komut, baglanti);
+            baglanti.Open();
+            SQLiteDataReader dr;
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                dil = Convert.ToInt32(dr["Dil"]);
+            }
+            baglanti.Close();
+            return dil;
+        }
 
-
-
+        public void DilDegistir(int dil)
+        {
+            string komut = "UPDATE Dil SET Dil=@Dil Where ID='1'";
+            SQLiteCommand cmd = new SQLiteCommand(komut, baglanti);
+            baglanti.Open();
+            cmd.Parameters.AddWithValue("@Dil", dil);
+            cmd.ExecuteNonQuery();
+            baglanti.Close();
+        }
     }
 }

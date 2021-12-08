@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
 using System.Windows.Forms;
 using S7.Net;
@@ -17,14 +18,19 @@ namespace PLC
         Plc x;
         public AnaSayfaList()
         {
+            int dil = db.DilAyar();
+            if (dil == 1)
+                Resources.Localization.Culture = new CultureInfo("en-US");
+
             InitializeComponent();
+
+            this.Text = Resources.Localization.Anasayfa;
         }
         
         public void okuma()
         {
             x = form.plc;
             okumaBg.RunWorkerAsync();
-
 
         }
         /// <summary>
@@ -51,11 +57,11 @@ namespace PLC
             x = form.plc;
             dt = db.VeriCek();
             DataGridViewTextBoxColumn isimClmn = new DataGridViewTextBoxColumn();
-            isimClmn.HeaderText = "İsim";
+            isimClmn.HeaderText = Resources.Localization.İsim;
             dataGridView1.Columns.Add(isimClmn);
 
             DataGridViewTextBoxColumn degerClmn = new DataGridViewTextBoxColumn();
-            degerClmn.HeaderText = "Değer";
+            degerClmn.HeaderText = Resources.Localization.Deger;
             dataGridView1.Columns.Add(degerClmn);
             okuma();
 

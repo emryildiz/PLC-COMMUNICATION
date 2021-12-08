@@ -1413,11 +1413,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emre Yıldız\\Desktop\\S7.NET PLC COMMUNICATION\\PLC\\PLC.csproj",
+      "projectUniqueName": "D:\\S7.NET PLC COMMUNICATION\\PLC-COMMUNICATION\\PLC\\PLC.csproj",
       "projectName": "PLC",
-      "projectPath": "C:\\Users\\Emre Yıldız\\Desktop\\S7.NET PLC COMMUNICATION\\PLC\\PLC.csproj",
+      "projectPath": "D:\\S7.NET PLC COMMUNICATION\\PLC-COMMUNICATION\\PLC\\PLC.csproj",
       "packagesPath": "C:\\Users\\Emre Yıldız\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emre Yıldız\\Desktop\\S7.NET PLC COMMUNICATION\\PLC\\obj\\",
+      "outputPath": "D:\\S7.NET PLC COMMUNICATION\\PLC-COMMUNICATION\\PLC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
